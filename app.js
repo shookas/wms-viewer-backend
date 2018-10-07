@@ -28,9 +28,9 @@ app.use(cors());
 
 app.use('/v1', v1);
 
-app.use('/', function(req, res){
-	res.statusCode = 200;//send the appropriate status code
-	res.json({status:"success", message:"Mongo API", data:{}})
+app.get('/', function(req, res){
+  res.statusCode = 200;//send the appropriate status code
+  res.json({status:"success", message:"Mongo API", data:{}})
 });
 
 // catch 404 and forward to error handler
